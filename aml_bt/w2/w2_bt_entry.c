@@ -69,7 +69,7 @@ static int w2_bt_init(void)
     else if (INTF_TYPE_IS_PCIE(amlbt_if_type))
     {
         BTI("%s w2 pcie \n", __func__);
-        ret = amlbt_w2p_init();
+        ret = 0;//amlbt_w2p_init();
     }
     else
     {
@@ -102,7 +102,7 @@ static void w2_bt_exit(void)
     else if (INTF_TYPE_IS_PCIE(amlbt_if_type))
     {
         BTI("%s w2 pcie \n", __func__);
-        amlbt_w2p_exit();
+        //amlbt_w2p_exit();
     }
     else
     {
