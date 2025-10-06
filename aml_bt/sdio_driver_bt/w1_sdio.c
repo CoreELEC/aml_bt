@@ -8,6 +8,12 @@
 #include "rf_d_top_reg.h"
 #include "wifi_coex_addr.h"
 
+unsigned char wifi_hal_probe_done = 0;
+EXPORT_SYMBOL(wifi_hal_probe_done);
+
+unsigned char wifi_irq_enable = 0;
+EXPORT_SYMBOL(wifi_irq_enable);
+
 struct amlw1_hwif_sdio g_w1_hwif_sdio;
 struct amlw1_hif_ops g_w1_hif_ops;
 
