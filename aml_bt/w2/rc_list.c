@@ -41,6 +41,8 @@
 #include "common.h"
 #include "rc_list.h"
 
+MODULE_IMPORT_NS(W2-AML);
+
 #define RG_AON_A24        0xf00060
 #define AML_ADDR_CPU      0
 #define AML_ADDR_AON      1

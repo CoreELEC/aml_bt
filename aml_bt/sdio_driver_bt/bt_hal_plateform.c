@@ -8,6 +8,8 @@
 #include <linux/platform_device.h>
 #include <linux/version.h>
 
+MODULE_IMPORT_NS(W1-AML);
+
 extern unsigned char (*host_wake_w1_req)(void);
 static int reg_config_complete = 0;
 static struct cdev BTAML_cdev;
