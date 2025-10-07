@@ -12,13 +12,13 @@ $(AMLBT_MOD_NAME)-objs := $(AMLBT_CFILES:.c=.o)
 ###############################################################################
 # Common
 ###############################################################################
-obj-m += aml_sdio.o
+obj-$(CONFIG_SDIO) += aml_sdio.o
 aml_sdio-objs += w1_sdio.o
 
 obj-m += $(AMLBT_MOD_NAME).o
 
 all:
-	make -C $(KERNEL_SRC) M=$(M) modules
+	make -C $(KERNEL_SRC) M=$(M) KBUILD_EXTRA_SYMBOLS=$(EXTRA_SYMBOLS_PATH) modules
 
 modules_install:
 	@$(MAKE) INSTALL_MOD_STRIP=1 M=$(M) -C $(KERNEL_SRC) modules_install
