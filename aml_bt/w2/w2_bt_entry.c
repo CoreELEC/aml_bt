@@ -42,8 +42,8 @@
 #include "w2_usb_bt.h"
 #include "w2_pcie_bt.h"
 
-extern struct aml_hif_sdio_ops g_hif_sdio_ops;
-extern struct aml_pm_type g_wifi_pm;
+extern struct aml_hif_sdio_ops w2_g_hif_sdio_ops;
+extern struct aml_pm_type w2_g_wifi_pm;
 
 static int w2_bt_init(void)
 {
